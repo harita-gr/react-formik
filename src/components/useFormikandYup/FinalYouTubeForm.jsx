@@ -15,7 +15,6 @@ function FinalYouTubeForm() {
     console.log("Form Data: ", values);
   };
 
-
   const validationSchema = Yup.object({
     name: Yup.string().trim().required("Required"),
     email: Yup.string().email("Invalid email format").required("Required"),
@@ -37,9 +36,7 @@ function FinalYouTubeForm() {
             type="text"
             id="name"
             name="name"
-            value={formik.values.name}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
+            {...formik.getFieldProps("name")}
           />
           {formik.touched.name && formik.errors.name ? (
             <div className="error">{formik.errors.name}</div>
@@ -51,9 +48,7 @@ function FinalYouTubeForm() {
             type="text"
             id="email"
             name="email"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
+            {...formik.getFieldProps("email")}
           />
           {formik.touched.email && formik.errors.email ? (
             <div className="error">{formik.errors.email}</div>
@@ -65,9 +60,7 @@ function FinalYouTubeForm() {
             type="text"
             id="channel"
             name="channel"
-            value={formik.values.channel}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
+            {...formik.getFieldProps("channel")}
           />
           {formik.touched.channel && formik.errors.channel ? (
             <div className="error">{formik.errors.channel}</div>
