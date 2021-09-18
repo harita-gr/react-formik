@@ -4,7 +4,7 @@ Exploring the concepts of Formik for Form Validation
 <img src="https://miro.medium.com/max/1400/1*glGIv2JMnHXeFw5w9CTRLg.jpeg" width="450" height="300">
 
 ---
-### Build Using
+### Built Using
 - React.js
 ---
 ### Features Implemented
@@ -27,6 +27,5 @@ Exploring the concepts of Formik for Form Validation
 ---
 ### Author
 Harita Ravindranath
-
 
 
