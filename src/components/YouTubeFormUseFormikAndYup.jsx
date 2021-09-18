@@ -1,7 +1,7 @@
 import React from "react";
 import { useFormik } from "formik";
 
-function YouTubeFormUseFormik() {
+function YouTubeFormUseFormikAndYup() {
   const initialValues = {
     name: "",
     email: "",
@@ -52,9 +52,7 @@ function YouTubeFormUseFormik() {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
-          {formik.touched.name && formik.errors.name ? (
-            <div className="error">{formik.errors.name}</div>
-          ) : null}
+          {formik.touched.name && formik.errors.name ? <div className="error">{formik.errors.name}</div> : null}
         </div>
         <div className="form-control">
           <label htmlFor="email">E-mail</label>
@@ -66,9 +64,7 @@ function YouTubeFormUseFormik() {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
-          {formik.touched.email && formik.errors.email ? (
-            <div className="error">{formik.errors.email}</div>
-          ) : null}
+          {formik.touched.email && formik.errors.email ? <div className="error">{formik.errors.email}</div> : null}
         </div>
         <div className="form-control">
           <label htmlFor="channel">Channel</label>
@@ -80,9 +76,7 @@ function YouTubeFormUseFormik() {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
-          {formik.touched.channel && formik.errors.channel ? (
-            <div className="error">{formik.errors.channel}</div>
-          ) : null}
+          {formik.touched.channel && formik.errors.channel ? <div className="error">{formik.errors.channel}</div> : null}
         </div>
         <button type="submit">Submit</button>
       </form>
@@ -90,4 +84,4 @@ function YouTubeFormUseFormik() {
   );
 }
 
-export default YouTubeFormUseFormik;
+export default YouTubeFormUseFormikAndYup;
