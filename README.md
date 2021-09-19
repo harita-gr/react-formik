@@ -13,7 +13,7 @@ Exploring the concepts of Formik for Form Validation
 - Handy Features
    - Object Nesting
    - Array etc.
-- Reusable Components
+- Reusable Controls
 - Sample Forms
 - Chakra UI
 ---
