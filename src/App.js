@@ -9,6 +9,8 @@ import NestedObjects from "./components/formikComponents/NestedObjects";
 import Array from "./components/formikComponents/Array";
 import FieldArrayComponent from "./components/formikComponents/FieldArrayComponent";
 
+import DisableSumbitButton from "./components/formikComponents/DisableSumbitButton"
+
 function App() {
   return (
     <div className="App">
@@ -40,7 +42,11 @@ function App() {
       {/* <Array /> */}
 
       {/*3. FieldArray component */}
-      <FieldArrayComponent />
+      {/* <FieldArrayComponent /> */}
+
+      {/*4. Disable Submit Button */}
+      <DisableSumbitButton />
+
     </div>
   );
 }
