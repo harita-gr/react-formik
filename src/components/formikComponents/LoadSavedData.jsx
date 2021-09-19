@@ -1,14 +1,30 @@
-import React from "react";
+import React, {useState} from "react";
 import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
 import * as Yup from "yup";
 import TextError from "../TextError";
 
-export default function DisableSumbitButton() {
+function LoadSavedData() {
+
+  const [formValues,setformValues] = useState(null);
   const initialValues = {
     name: "",
     email: "",
     channel: "",
     comments: "",
+    social: {
+      facebook: "",
+      twitter: "",
+    },
+    phoneNumbers: ["", ""],
+    phNumbers: [""],
+  };
+
+  //Assume to be saved data so far
+  const savedValues = {
+    name: "Harita",
+    email: "harita@test.com",
+    channel: "randompie",
+    comments: "Welcome to Formik",
     social: {
       facebook: "",
       twitter: "",
@@ -31,10 +47,11 @@ export default function DisableSumbitButton() {
 
   return (
     <Formik
-      initialValues={initialValues}
+      initialValues={formValues || initialValues}
       validationSchema={validationSchema}
       onSubmit={onSubmit}
-      validateOnMount
+      enableReinitialize
+    //   validateOnMount
     >
       {(formik) => {
         console.log("Formik props", formik);
@@ -68,49 +85,10 @@ export default function DisableSumbitButton() {
               <label htmlFor="twitter">Twitter Profile</label>
               <Field type="text" id="twitter" name="social.twitter" />
             </div>
-            {/* <div className="form-control">
-                          <label htmlFor="primaryPh">Primary Phone Number</label>
-                          <Field type="text" id="primaryPh" name="phoneNumbers[0]" />
-                        </div>
-                        <div className="form-control">
-                          <label htmlFor="secondaryPh">Secondary Phone Number</label>
-                          <Field type="text" id="secondaryPh" name="phoneNumbers[1]" />
-                        </div> */}
-            <div className="form-control">
-              <label>List of Phone Numbers</label>
-              <FieldArray name="phNumbers">
-                {/* This fn will automatically get some props. Calling it as fieldArrayProps*/}
-                {(fieldArrayProps) => {
-                  // Let us see what does it contain
-                  console.log("Field Array props", fieldArrayProps);
-                  const { push, remove, form } = fieldArrayProps;
-                  const { values } = form;
-                  const { phNumbers } = values;
-                  // to display phone numbers
-                  return (
-                    <div>
-                      {phNumbers.map((phNo, index) => (
-                        <div key={index}>
-                          <Field name={`phNumbers[${index}]`} />
-                          {/* remove button only if more than 1 ph no is there */}
-                          {index > 0 && (
-                            <button type="button" onClick={() => remove(index)}>
-                              {" "}
-                              -{" "}
-                            </button>
-                          )}
-                          <button type="button" onClick={() => push(index)}>
-                            {" "}
-                            +{" "}
-                          </button>
-                        </div>
-                      ))}
-                    </div>
-                  );
-                }}
-              </FieldArray>
-            </div>
+  
+ {/* Deleted other fields */}
 
+            <button type="button" onClick={() => setformValues(savedValues)}> Load Saved Data </button>
             <button
               type="submit"
               disabled={
@@ -125,3 +103,4 @@ export default function DisableSumbitButton() {
     </Formik>
   );
 }
+export default LoadSavedData;

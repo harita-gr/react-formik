@@ -10,6 +10,7 @@ import Array from "./components/formikComponents/Array";
 import FieldArrayComponent from "./components/formikComponents/FieldArrayComponent";
 
 import DisableSumbitButton from "./components/formikComponents/DisableSumbitButton"
+import LoadSavedData from "./components/formikComponents/LoadSavedData";
 
 function App() {
   return (
@@ -45,7 +46,10 @@ function App() {
       {/* <FieldArrayComponent /> */}
 
       {/*4. Disable Submit Button */}
-      <DisableSumbitButton />
+      {/* <DisableSumbitButton /> */}
+
+      {/* 5. Load saved Data */}
+      <LoadSavedData />
 
     </div>
   );
