@@ -1,4 +1,7 @@
 import "./App.css";
+import { ChakraProvider } from "@chakra-ui/react";
+// import { theme, ThemeProvider } from "@chakra-ui/core";
+
 import YouTubeForm from "./components/useFormikandYup/YouTubeForm";
 import YouTubeFormUseFormik from "./components/useFormikandYup/YouTubeFormUseFormik";
 import YouTubeFormUseFormikAndYup from "./components/useFormikandYup/YouTubeFormUseFormikAndYup";
@@ -16,61 +19,64 @@ import LoginForm from "./components/modelForms/LoginForm";
 import RegisterForm from "./components/modelForms/RegisterForm";
 import CouseEnrollmentForm from "./components/modelForms/CouseEnrollmentForm";
 
-
 function App() {
   return (
-    <div className="App">
-      {/* LEVEL 1 - useFormik Hook */}
+    // <ThemeProvider theme={theme}>
+    <ChakraProvider>
+      <div className="App">
+        {/* LEVEL 1 - useFormik Hook */}
 
-      {/* 1. Simple Form */}
-      {/* <YouTubeForm /> */}
+        {/* 1. Simple Form */}
+        {/* <YouTubeForm /> */}
 
-      {/* 2. useFormik */}
-      {/* <YouTubeFormUseFormik /> */}
+        {/* 2. useFormik */}
+        {/* <YouTubeFormUseFormik /> */}
 
-      {/* 3. useFormik and schema validation using Yup */}
-      {/* <YouTubeFormUseFormikAndYup /> */}
+        {/* 3. useFormik and schema validation using Yup */}
+        {/* <YouTubeFormUseFormikAndYup /> */}
 
-      {/* 4. Reducing Boilerplates */}
-      {/* <FinalYouTubeForm /> */}
+        {/* 4. Reducing Boilerplates */}
+        {/* <FinalYouTubeForm /> */}
 
-      {/* LEVEL 2 - Formik Component */}
+        {/* LEVEL 2 - Formik Component */}
 
-      {/*1. Formik,Form,Field,ErrorMessage */}
-      {/* <FormikComponents /> */}
+        {/*1. Formik,Form,Field,ErrorMessage */}
+        {/* <FormikComponents /> */}
 
-      {/* LEVEL 3 - Managing State of Form field */}
+        {/* LEVEL 3 - Managing State of Form field */}
 
-      {/*1. Nested Objects  */}
-      {/* <NestedObjects /> */}
+        {/*1. Nested Objects  */}
+        {/* <NestedObjects /> */}
 
-      {/*2. Array */}
-      {/* <Array /> */}
+        {/*2. Array */}
+        {/* <Array /> */}
 
-      {/*3. FieldArray component */}
-      {/* <FieldArrayComponent /> */}
+        {/*3. FieldArray component */}
+        {/* <FieldArrayComponent /> */}
 
-      {/*4. Disable Submit Button */}
-      {/* <DisableSumbitButton /> */}
+        {/*4. Disable Submit Button */}
+        {/* <DisableSumbitButton /> */}
 
-      {/* 5. Load saved Data */}
-      {/* <LoadSavedData /> */}
+        {/* 5. Load saved Data */}
+        {/* <LoadSavedData /> */}
 
-      {/* LEVEL 4 - Reusable Components */}
+        {/* LEVEL 4 - Reusable Components */}
 
-      {/* 1. Formik Component */}
-      {/* <FormikContainer /> */}
+        {/* 1. Formik Component */}
+        {/* <FormikContainer /> */}
 
-      {/* 2. Login Form */}
-      {/* <LoginForm /> */}
+        {/* 2. Login Form */}
+        <LoginForm />
 
-      {/* 3. Register Form */}
-      {/* <RegisterForm /> */}
- 
+        {/* 3. Register Form */}
+        {/* <RegisterForm /> */}
 
-      <CouseEnrollmentForm />
+        {/* 4. CouseEnrollment Form */}
+        {/* <CouseEnrollmentForm /> */}
 
-    </div>
+      </div>
+    {/* </ThemeProvider> */}
+    </ChakraProvider>
   );
 }
 
