@@ -9,8 +9,16 @@ import NestedObjects from "./components/formikComponents/NestedObjects";
 import Array from "./components/formikComponents/Array";
 import FieldArrayComponent from "./components/formikComponents/FieldArrayComponent";
 
-import DisableSumbitButton from "./components/formikComponents/DisableSumbitButton"
+import DisableSumbitButton from "./components/formikComponents/DisableSumbitButton";
 import LoadSavedData from "./components/formikComponents/LoadSavedData";
+import FormikContainer from "./components/reusableFormikComponents/FormikContainer";
+// import  from "./components/reusableFormikComponents/";
+// import  from "./components/reusableFormikComponents/";
+// import  from "./components/reusableFormikComponents/";
+// import  from "./components/reusableFormikComponents/";
+// import  from "./components/reusableFormikComponents/";
+// import  from "./components/reusableFormikComponents/";
+// import  from "./components/reusableFormikComponents/";
 
 function App() {
   return (
@@ -49,8 +57,12 @@ function App() {
       {/* <DisableSumbitButton /> */}
 
       {/* 5. Load saved Data */}
-      <LoadSavedData />
+      {/* <LoadSavedData /> */}
 
+      {/* LEVEL 4 - Reusable Components */}
+
+      {/* 1. Formik Component */}
+      <FormikContainer />
     </div>
   );
 }
