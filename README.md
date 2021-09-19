@@ -14,6 +14,8 @@ Exploring the concepts of Formik for Form Validation
    - Object Nesting
    - Array etc.
 - Reusable Components
+- Sample Forms
+- Chakra UI
 ---
 ### Steps to Run
 - Clone the repository
