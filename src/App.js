@@ -14,6 +14,8 @@ import LoadSavedData from "./components/formikComponents/LoadSavedData";
 import FormikContainer from "./components/reusableFormikComponents/FormikContainer";
 import LoginForm from "./components/modelForms/LoginForm";
 import RegisterForm from "./components/modelForms/RegisterForm";
+import CouseEnrollmentForm from "./components/modelForms/CouseEnrollmentForm";
+
 
 function App() {
   return (
@@ -63,7 +65,11 @@ function App() {
       {/* <LoginForm /> */}
 
       {/* 3. Register Form */}
-      <RegisterForm />
+      {/* <RegisterForm /> */}
+ 
+
+      <CouseEnrollmentForm />
+
     </div>
   );
 }
