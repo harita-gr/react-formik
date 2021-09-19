@@ -12,13 +12,8 @@ import FieldArrayComponent from "./components/formikComponents/FieldArrayCompone
 import DisableSumbitButton from "./components/formikComponents/DisableSumbitButton";
 import LoadSavedData from "./components/formikComponents/LoadSavedData";
 import FormikContainer from "./components/reusableFormikComponents/FormikContainer";
-// import  from "./components/reusableFormikComponents/";
-// import  from "./components/reusableFormikComponents/";
-// import  from "./components/reusableFormikComponents/";
-// import  from "./components/reusableFormikComponents/";
-// import  from "./components/reusableFormikComponents/";
-// import  from "./components/reusableFormikComponents/";
-// import  from "./components/reusableFormikComponents/";
+import LoginForm from "./components/modelForms/LoginForm";
+import RegisterForm from "./components/modelForms/RegisterForm";
 
 function App() {
   return (
@@ -62,7 +57,13 @@ function App() {
       {/* LEVEL 4 - Reusable Components */}
 
       {/* 1. Formik Component */}
-      <FormikContainer />
+      {/* <FormikContainer /> */}
+
+      {/* 2. Login Form */}
+      {/* <LoginForm /> */}
+
+      {/* 3. Register Form */}
+      <RegisterForm />
     </div>
   );
 }

@@ -24,6 +24,13 @@ textarea {
   border-radius: 5px;
 }
 
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+display: inline-block;
+margin: 10px;
+}
+
+
 .form-control {
   margin-bottom: 15px;
 }
